@@ -12,7 +12,7 @@
 
 <body background-color="white" color="grey">
 <div class="content">
-	<iframe src="http://cast5.servcast.net:8052/currentsong?sid=1" height="30" width="500" frameborder="0" scrolling="no" ></iframe><br>
+	<iframe src="http://cast5.servcast.net:8052/currentsong?sid=1" id="naber" height="30" width="500" frameborder="0" scrolling="no" ></iframe><br>
 	
 	<audio controls>
     <source src="http://cast5.servcast.net:8052/stream?type=http&nocache=6" type="audio/mp3">
@@ -20,4 +20,11 @@
 </div>
 <div align="left"></div>
 </body>
+<script>
+window.setInterval("reloadIFrame();", 10000);
+function reloadIFrame() {
+ document.getElementById("naber").src="./player.html";
+}
+</script>
+</script>
 </html>
