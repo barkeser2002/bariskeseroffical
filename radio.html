@@ -3,17 +3,27 @@
 <head>
 <style>
 .content {
-  max-width: 600px;
+  max-width: 300px;
   margin: auto;
   margin-left:0px;
-  padding:2px 2px 2px 2px;
 }
 </style>
 </head>
-<body>
+
+<body background-color="white" color="grey">
 <div class="content">
-<iframe src="./player.html" allow="autoplay" frameborder="0" border="0" height="100" width="500" frameborder="0" scrolling="no"></iframe>
+	<iframe src="http://cast5.servcast.net:8052/currentsong" id="naber" height="30" width="300" frameborder="0" scrolling="no" ></iframe><br>
+	
+	<audio controls>
+    <source src="http://cast5.servcast.net:8052/stream" type="audio/mp3">
+	</audio>
 </div>
 <div align="left"></div>
 </body>
+<script>
+window.setInterval("reloadIFrame();", 10000);
+function reloadIFrame() {
+ document.getElementById("naber").src="./radio.html";
+}
+</script>
 </html>
